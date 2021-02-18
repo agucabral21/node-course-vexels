@@ -1,0 +1,21 @@
+{
+  "name": "course-vexels",
+  "version": "1.0.0",
+  "description": "Repo para ejercicios de curso de Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon web-server/src/app.js -e js,hbs",
+    "deploy-heroku": "git push heroku main "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agucabral21/node-course-vexels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agucabral21/node-course-vexels/issues"
+  },
+  "homepage": "https://github.com/agucabral21/node-course-vexels#readme"
+}
