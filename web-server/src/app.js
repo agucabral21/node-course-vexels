@@ -3,7 +3,6 @@ const express = require("express");
 const hbs = require("hbs");
 const { geoCode } = require("../utils/geocode");
 const { forecast } = require("../utils/forecast");
-
 const app = express();
 
 //Paths
