@@ -17,13 +17,6 @@ hbs.registerPartials(partialsPath);
 
 //Directorio estatico
 app.use(express.static(publicDirectoryPath));
-/*
-const getForecast = (address) => {
-  const result = 
-  console.log(result)
-  return result
-  
-};*/
 
 app.get("", (req, res) => {
   res.render("index", {
