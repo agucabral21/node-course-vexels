@@ -24,6 +24,9 @@ const product = {
 // const label = product.label
 // const stock = product.stock
 
+
+//RENOMBRAR VARIABLES ---> label:productLabel
+//DEFAULT VALUES      ---> rating=5
 // const {label:productLabel, stock, rating = 5} = product
 // console.log(productLabel)
 // console.log(stock)

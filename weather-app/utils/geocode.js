@@ -9,20 +9,20 @@ const geoCode = (adress,callback) => {
     'access_token='+mapBoxId+'&limit=1';    
 
          //llamo api que me devuelve ubicacion
-    request({url:url, json:true}, (error,response) => {    
+    request({url,json:true},(error,{body}={}) => {    
         //low level error
         if(error){
            callback('Unable to connect to service',undefined)
         //external server message error
-        }else if(response.body.error){
-            callback(response.body.error,undefined)
-        }else if(response.body.features.length === 0){
+        }else if(body.error){
+            callback(body.error,undefined)
+        }else if(body.features.length === 0){
             callback("Unable to find location",undefined)
         }else{
             callback(undefined, {
-                latitude:response.body.features[0].center[1],
-                longitude:response.body.features[0].center[0],
-                location:response.body.features[0].text
+                latitude:body.features[0].center[1],
+                longitude:body.features[0].center[0],
+                location:body.features[0].text
             })           
         } 
         
