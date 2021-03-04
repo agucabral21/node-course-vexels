@@ -4,7 +4,7 @@ const hbs = require("hbs");
 const { geoCode } = require("../utils/geocode");
 const { forecast } = require("../utils/forecast");
 const app = express();
-const port = process.env.port || 3001
+const port = process.env.port || 3001;
 
 //Paths
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -20,7 +20,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get("", (req, res) => {
-  res.render("index", {
+  res.render("index_trama_test", {
     title: "Main Page",
     name: "Agus Cabral",
   });
@@ -33,7 +33,7 @@ app.get("/weather", (req, res) => {
       error: "You must provide Address",
     });
   } else {
-    geoCode(address, (error, { longitude, latitude, location } = {}) => {      
+    geoCode(address, (error, { longitude, latitude, location } = {}) => {
       if (error) return res.send({ error });
       forecast(latitude, longitude, (error, data) => {
         if (error) return res.send({ error });

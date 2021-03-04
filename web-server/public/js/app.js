@@ -1,10 +1,30 @@
-console.log("Client side js loaded");
+console.log("Client side jsss loaded");
 
 const address = "Boston";
 
+const menu = document.querySelector("#menu");
+const titulo = document.querySelector("#titulo");
+//const option = document.querySelector(".option");
 
+menu.addEventListener("mouseover", (event) => {
+  console.log("aaaaaaaaaaaa");
+  titulo.style.webkitFilter = "blur(17px)";
+  titulo.style.transitionDuration = "0.5s";
+});
+/*
+option.addEventListener("mouseover", (event) => {
+  console.log("eee");
+  titulo.style.webkitFilter = "letter-spacing(10px)";
+  titulo.style.transitionDuration = "0.5s";
+});*/
 
+menu.addEventListener("mouseleave", (event) => {
+  console.log("aaaaaaaaaaaa");
+  titulo.style.webkitFilter = "blur(0px)";
+  titulo.style.transitionDuration = "0.5s";
+});
 
+/*
 const weatherForm = document.querySelector("form");
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
@@ -25,3 +45,4 @@ weatherForm.addEventListener("submit", (event) => {
     });
   });
 });
+*/
